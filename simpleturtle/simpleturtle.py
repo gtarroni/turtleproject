@@ -16,12 +16,12 @@ class Turtle:
         self.aTriangle.draw(win)
         self.penStatus = 1
 
-    def setColour(self, colour):
+    def set_colour(self, colour):
         """Set Turtle colour"""
         self.colour = colour
         self.aTriangle.setFill(self.colour)
 
-    def moveForward(self, d):
+    def move_forward(self, d):
         """Move Turtle forward of d pixels"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
@@ -37,7 +37,7 @@ class Turtle:
 
         self.aTriangle.move(T[0], T[1])
 
-    def rotateLeft(self, d):
+    def rotate_left(self, d):
         """Rotate Turtle anti-clockwise of d pixels"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
@@ -55,7 +55,7 @@ class Turtle:
         self.aTriangle.setFill(self.colour)
         self.aTriangle.draw(win)
 
-    def rotateRight(self, d):
+    def rotate_right(self, d):
         """Rotate Turtle clockwise of d pixels"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
@@ -73,11 +73,11 @@ class Turtle:
         self.aTriangle.setFill(self.colour)
         self.aTriangle.draw(win)
 
-    def setPenUp(self):
+    def set_pen_up(self):
         """Disable Turtle's drawing capability"""
         self.penStatus = 0
 
-    def setPenDown(self):
+    def set_pen_down(self):
         """Enable Turtle's drawing capability"""
         self.penStatus = 1
 
