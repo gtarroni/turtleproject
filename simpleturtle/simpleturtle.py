@@ -6,7 +6,7 @@ import math
 
 
 class Turtle:
-    """Turtle class: creates turtle instances with drawing capabilities"""
+    """Turtle class: creates Turtle instances with drawing capabilities"""
 
     def __init__(self, name):
         self.name = name
@@ -22,7 +22,7 @@ class Turtle:
         self.aTriangle.setFill(self.colour)
 
     def move_forward(self, d):
-        """Move Turtle forward of d pixels"""
+        """Move Turtle forward by d pixels"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
                              [pointList[0].getY(), pointList[1].getY(), pointList[2].getY()]])
@@ -38,7 +38,7 @@ class Turtle:
         self.aTriangle.move(T[0], T[1])
 
     def rotate_left(self, d):
-        """Rotate Turtle anti-clockwise of d pixels"""
+        """Rotate Turtle anticlockwise by d degrees"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
                              [pointList[0].getY(), pointList[1].getY(), pointList[2].getY()]])
@@ -56,7 +56,7 @@ class Turtle:
         self.aTriangle.draw(win)
 
     def rotate_right(self, d):
-        """Rotate Turtle clockwise of d pixels"""
+        """Rotate Turtle clockwise by d degrees"""
         pointList = self.aTriangle.getPoints()
         pointsCC = np.array([[pointList[0].getX(), pointList[1].getX(), pointList[2].getX()],
                              [pointList[0].getY(), pointList[1].getY(), pointList[2].getY()]])
@@ -74,12 +74,13 @@ class Turtle:
         self.aTriangle.draw(win)
 
     def set_pen_up(self):
-        """Disable Turtle's drawing capability"""
+        """Disable Turtle's drawing function"""
         self.penStatus = 0
 
     def set_pen_down(self):
-        """Enable Turtle's drawing capability"""
+        """Enable Turtle's drawing function"""
         self.penStatus = 1
 
 win = GraphWin()
+
 
